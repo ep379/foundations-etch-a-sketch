@@ -16,7 +16,11 @@ function createField(rows) {
             divTemporary.style.cssText = "flex-basis: " + flexBasis + ";";
             container.appendChild(divTemporary);
             divTemporary.addEventListener('mouseenter', (event) => {
-                event.target.style.backgroundColor = "black";
+                let redRandom = Math.random() * 256;
+                let greenRandom = Math.random() * 256;
+                let blueRandom = Math.random() * 256;
+                // event.target.style.backgroundColor = "black";
+                event.target.style.backgroundColor = "rgb(" + redRandom + " , " + greenRandom + ", " + blueRandom + ")";
             });
         }
     }
